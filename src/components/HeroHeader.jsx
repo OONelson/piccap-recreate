@@ -2,19 +2,19 @@ import BlueBtns from "../reusables/blueBtns";
 
 const images = [
   {
-    imgName: "../images/hero-pic1.jpg",
+    imgName: "../../public/images/hero-pic1.jpg",
     altName: "heropic1",
   },
   {
-    imgName: "../images/hero-pic2.jpg",
+    imgName: "../../public/images/hero-pic2.jpg",
     altName: "heropic2",
   },
   {
-    imgName: "../images/hero-pic3.jpg",
+    imgName: "../../public/images/hero-pic3.jpg",
     altName: "heropic3",
   },
   {
-    imgName: "../images/hero-pic4.jpg",
+    imgName: "../../public/images/hero-pic4.jpg",
     altName: "heropic4",
   },
 ];
@@ -51,10 +51,16 @@ const HeroHeader = () => {
           <BlueBtns>Start designing</BlueBtns>
         </article>
 
-        <div className="bg-gray600">
+        <div className="bg-gray600 grid grid-cols-2 grid-rows-2 gap-0 m-0 p-0">
           {images.map((image) => (
-            <img src={image.imgName} alt={image.altName} />
+            <img
+              className="h-full w-max"
+              src={image.imgName}
+              alt={image.altName}
+            />
           ))}
+
+          {/* <img src="../../public/images/hero-pic1.jpg" alt="" /> */}
         </div>
       </section>
     </main>
