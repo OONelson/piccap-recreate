@@ -46,7 +46,7 @@
 
 @layer components {
   .card {
-    @apply rounded-2xl w-[25rem] h-[25rem] p-4;
+    @apply rounded-2xl w-[30rem] h-[25rem] p-4;
   }
 
   .halfcard {
