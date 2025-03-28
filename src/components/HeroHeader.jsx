@@ -2,66 +2,66 @@ import BlueBtns from "../reusables/blueBtns";
 
 const images = [
   {
-    imgName: "../../public/images/hero-pic1.jpg",
+    imgName: "../../public/images/first-item-hero.jpg",
     altName: "heropic1",
   },
   {
-    imgName: "../../public/images/hero-pic2.jpg",
+    imgName: "../../public/images/phone-hero.jpg",
     altName: "heropic2",
   },
   {
-    imgName: "../../public/images/hero-pic3.jpg",
+    imgName: "../../public/images/third-item-hero.jpg",
     altName: "heropic3",
-  },
-  {
-    imgName: "../../public/images/hero-pic4.jpg",
-    altName: "heropic4",
   },
 ];
 
 const HeroHeader = () => {
   return (
-    <main className="bg-linear-to-r from-hero-linear-1 to-linear-2">
+    <main className="bg-sky-blue/40 ">
       {/* Header section  */}
-      <header>
-        <h3 className="text-heading-color">Piccap</h3>
+      <header className="flex justify-between items-center w-full py-5 px-20 ">
+        <h3 className="text-heading-color font-bold text-2xl">Piccap</h3>
 
-        <nav className="text-nav-color">
+        <nav className="text-nav-color flex justify-between items-center w-[10%] font-medium cursor-pointer">
           <span>Templates</span>
           <span>Pricing</span>
         </nav>
-        <BlueBtns>Sign In</BlueBtns>
+        <BlueBtns text="Sign In" />
       </header>
 
       {/* Main hero section */}
 
-      <section>
-        <article>
-          <div>
-            <h1>
+      <section className="flex justify-center flex-col items-center py-20 h-full image-blend-fade-to-point">
+        <article className="flex justify-center items-center flex-col h-[20rem]">
+          <div className="flex flex-col justify-center items-center text-center">
+            <h1 className="text-8xl font-medium tracking-tight text-wrap w-[80%] pb-5 leading-22">
               Get stunning graphics,
-              <span>faster</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue to-sky-blue italic">
+                faster
+              </span>
             </h1>
 
-            <p>
+            <p className="text-nav-color text-xl w-[75%]">
               Effortless tweak templates and captions. Create stunning visuals
-              in seconds. No design degree required <span>(we promise).</span>
+              in seconds. No design degree required{" "}
+              <span className="italic">(we promise).</span>
             </p>
           </div>
-          <BlueBtns>Start designing</BlueBtns>
+          <BlueBtns text="Start designing" className="my-10" />
         </article>
 
-        <div className="bg-gray600 grid grid-cols-2 grid-rows-2 gap-0 m-0 p-0">
+        {/* <div className="image-blend-fade-to-point"> */}
+        <div className="p-8 flex justify-between items-start w-[80%] ">
           {images.map((image) => (
             <img
-              className="h-full w-max"
+              className="w-[200%] odd:rounded-4xl odd:bg-hero-linear-1 even:rounded-t-[4rem] even:mx-10 first:rotate-[15deg] last:-rotate-[10deg] "
               src={image.imgName}
               alt={image.altName}
             />
           ))}
-
-          {/* <img src="../../public/images/hero-pic1.jpg" alt="" /> */}
         </div>
+        <div className="image-blend-fade-overlay text-black"></div>
+        {/* </div> */}
       </section>
     </main>
   );
