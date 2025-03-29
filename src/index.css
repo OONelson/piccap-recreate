@@ -48,10 +48,6 @@
   .card {
     @apply rounded-2xl w-[30rem] h-[25rem] p-4;
   }
-
-  .halfcard {
-    @apply w-[15rem] h-[25rem] p-4;
-  }
 }
 
 /* * {
